@@ -257,7 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63911186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 121145532}
   - component: {fileID: 121145533}
   - component: {fileID: 121145534}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pin (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 138576089}
   - component: {fileID: 138576088}
   - component: {fileID: 138576090}
+  - component: {fileID: 138576092}
   - component: {fileID: 138576091}
   m_Layer: 0
   m_Name: NeogulMan
@@ -561,12 +562,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 45f5b74dac0a6f54c9b91aeea95afea4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f727c7078b856424b9fc7c835f915439, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6, y: 6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -580,8 +581,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138576085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -115.5, y: 60, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -108.2, y: 59.3, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2021612392}
   m_RootOrder: 0
@@ -620,18 +621,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.21080351, y: -0.151515}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6, y: 6}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 6, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 6}
+  m_Size: {x: 5.578393, y: 5.69697}
   m_EdgeRadius: 0
 --- !u!114 &138576090
 MonoBehaviour:
@@ -645,10 +646,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae955d7e360102a46b90b1b82fffc907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
-  jump: 20
-  maxSpeed: 10
   NeogulMan: {fileID: 138576085}
+  jump: 5
+  speed: 10
 --- !u!95 &138576091
 Animator:
   serializedVersion: 3
@@ -659,7 +659,7 @@ Animator:
   m_GameObject: {fileID: 138576085}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e87ed2e1ca780f498299af40f88e7c2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -668,6 +668,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &138576092
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138576085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.21488738, y: -2.9659557}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6, y: 6}
+    newSize: {x: 6, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.5702252, y: 0.20519805}
+  m_EdgeRadius: 0
 --- !u!1 &167476141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,7 +1064,7 @@ GameObject:
   - component: {fileID: 451136797}
   - component: {fileID: 451136796}
   - component: {fileID: 451136798}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1308,7 +1334,7 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.85
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -1355,7 +1381,7 @@ GameObject:
   - component: {fileID: 636191480}
   - component: {fileID: 636191482}
   - component: {fileID: 636191481}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 706340662}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1529,7 +1555,7 @@ GameObject:
   - component: {fileID: 727856889}
   - component: {fileID: 727856890}
   - component: {fileID: 727856891}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pin (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1817,7 +1843,7 @@ GameObject:
   - component: {fileID: 1016958475}
   - component: {fileID: 1016958476}
   - component: {fileID: 1016958477}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1926,7 +1952,7 @@ GameObject:
   - component: {fileID: 1121563561}
   - component: {fileID: 1121563562}
   - component: {fileID: 1121563563}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2035,7 +2061,7 @@ GameObject:
   - component: {fileID: 1164344575}
   - component: {fileID: 1164344574}
   - component: {fileID: 1164344576}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2144,7 +2170,7 @@ GameObject:
   - component: {fileID: 1190000988}
   - component: {fileID: 1190000987}
   - component: {fileID: 1190000989}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2253,7 +2279,7 @@ GameObject:
   - component: {fileID: 1195341894}
   - component: {fileID: 1195341895}
   - component: {fileID: 1195341896}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2362,7 +2388,7 @@ GameObject:
   - component: {fileID: 1230730489}
   - component: {fileID: 1230730490}
   - component: {fileID: 1230730491}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2471,7 +2497,7 @@ GameObject:
   - component: {fileID: 1253846733}
   - component: {fileID: 1253846734}
   - component: {fileID: 1253846735}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2580,7 +2606,7 @@ GameObject:
   - component: {fileID: 1269460062}
   - component: {fileID: 1269460061}
   - component: {fileID: 1269460063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2848,7 +2874,7 @@ GameObject:
   - component: {fileID: 1512153627}
   - component: {fileID: 1512153626}
   - component: {fileID: 1512153628}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3066,7 +3092,7 @@ GameObject:
   - component: {fileID: 1609587955}
   - component: {fileID: 1609587956}
   - component: {fileID: 1609587957}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3174,7 +3200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686746944}
   - component: {fileID: 1686746943}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3355,7 +3381,7 @@ GameObject:
   - component: {fileID: 1731279657}
   - component: {fileID: 1731279658}
   - component: {fileID: 1731279659}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pin (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3698,7 +3724,7 @@ GameObject:
   - component: {fileID: 1786483050}
   - component: {fileID: 1786483049}
   - component: {fileID: 1786483051}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3807,7 +3833,7 @@ GameObject:
   - component: {fileID: 1821395987}
   - component: {fileID: 1821395986}
   - component: {fileID: 1821395988}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3950,7 +3976,7 @@ GameObject:
   - component: {fileID: 1887941034}
   - component: {fileID: 1887941033}
   - component: {fileID: 1887941035}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4059,7 +4085,7 @@ GameObject:
   - component: {fileID: 1938854359}
   - component: {fileID: 1938854360}
   - component: {fileID: 1938854361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4199,7 +4225,7 @@ GameObject:
   - component: {fileID: 2077916382}
   - component: {fileID: 2077916383}
   - component: {fileID: 2077916384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4306,7 +4332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2115517501}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
