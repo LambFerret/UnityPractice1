@@ -6,8 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public GameObject NeogulMan;
     public float jump;
+    public float jumpX;
+    public float jumpY;
+
     public float speed;
     bool isJumping = false;
+    bool isAir = false;
     Rigidbody2D rb;
     Animator ani;
     Vector3 playerDir;
@@ -18,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
 
+
     }
 
     void Update()
@@ -26,22 +31,29 @@ public class PlayerMovement : MonoBehaviour
         {
             isJumping = true;
         }
-        if (Input.GetButtonUp("Horizontal"))
+        if (!isAir)
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            if (Input.GetButtonUp("Horizontal"))
+            {
+                ani.SetBool("isMoving", true);
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
+            Move();
+            Jump();
         }
+       
 
     }
     void FixedUpdate()
     {
-        Move();
-        Jump();
+        
 
     }
 
     void Move()
     {
         float h = Input.GetAxisRaw("Horizontal");
+        ani.SetBool("isMoving", false);
         if (h > 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
@@ -67,13 +79,14 @@ public class PlayerMovement : MonoBehaviour
             return;
         if (playerDir == Vector3.left)
         {
-            Vector2 jumpVelocity = new Vector2(-jump, jump * 2);
+
+            Vector2 jumpVelocity = new Vector2(-jump* jumpX, jump * jumpY);
             rb.AddForce(jumpVelocity, ForceMode2D.Impulse);
 
         }
         else
         {
-            Vector2 jumpVelocity = new Vector2(jump, jump * 2);
+            Vector2 jumpVelocity = new Vector2(jump * jumpX, jump * jumpY);
             rb.AddForce(jumpVelocity, ForceMode2D.Impulse);
 
         }
@@ -82,10 +95,21 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("attach" + other.gameObject.layer);
+        if (other.gameObject.layer == 3)
+        {
+            isAir = false;
+            Debug.Log("attach" + other.gameObject.layer);
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
+        }
+
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("detach" + other.gameObject.layer);
+        if (other.gameObject.layer == 3)
+        {
+            isAir = true;
+            Debug.Log("detach" + other.gameObject.layer);
+        }
     }
 }
