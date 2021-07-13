@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
     public float speed;
     bool isJumping = false;
+    bool isAir = false;
     Rigidbody2D rb;
     Animator ani;
     Vector3 playerDir;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+
 
     }
 
@@ -30,12 +32,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
+        if (!isAir)
+        {
+            Move();
+            Jump();
+        }
 
     }
     void FixedUpdate()
     {
-        Move();
-        Jump();
+
 
     }
 
@@ -82,10 +88,20 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("attach" + other.gameObject.layer);
+        if (other.gameObject.layer == 3)
+        {
+            isAir = false;
+            Debug.Log("attach" + other.gameObject.layer);
+
+        }
+
     }
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("detach" + other.gameObject.layer);
+        if (other.gameObject.layer == 3)
+        {
+            isAir = true;
+            Debug.Log("detach" + other.gameObject.layer);
+        }
     }
 }
