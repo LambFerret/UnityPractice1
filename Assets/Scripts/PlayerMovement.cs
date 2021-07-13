@@ -10,18 +10,22 @@ public class PlayerMovement : MonoBehaviour
     public float jumpY;
 
     public float speed;
+    public int score;
+    public int scoreper;
     bool isJumping = false;
     bool isAir = false;
+    int scoreCount;
+
     Rigidbody2D rb;
     Animator ani;
     Vector3 playerDir;
     // Start is called before the first frame update
     void Start()
     {
-
+        score = 0;
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
-
+        scoreCount = 6;
 
     }
 
@@ -46,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
+        
         
 
     }
@@ -102,6 +107,13 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
 
         }
+        if (other.gameObject.layer == 6)
+        {
+            Destroy(other.gameObject);
+            score += scoreper;
+            scoreCount -= 1;
+            Debug.Log(scoreCount);
+        }
 
     }
     void OnTriggerExit2D(Collider2D other)
@@ -110,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isAir = true;
             Debug.Log("detach" + other.gameObject.layer);
+            
         }
     }
 }
