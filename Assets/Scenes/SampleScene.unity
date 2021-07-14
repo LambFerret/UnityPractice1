@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63911186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,15 +373,15 @@ RectTransform:
   m_GameObject: {fileID: 67342808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2034723412}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -442.8, y: -236.65}
-  m_SizeDelta: {x: 107.1058, y: 45.6906}
+  m_AnchoredPosition: {x: -440.27124, y: 232.0904}
+  m_SizeDelta: {x: 118.7541, y: 24.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &67342810
 MonoBehaviour:
@@ -405,11 +405,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 8
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 73093966}
   - component: {fileID: 73093967}
   - component: {fileID: 73093968}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ladder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 121145532}
   - component: {fileID: 121145533}
   - component: {fileID: 121145534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pin (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138576085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -77.5, y: 40, z: 0}
+  m_LocalPosition: {x: -74.9, y: 42.3, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2021612392}
@@ -793,8 +793,9 @@ MonoBehaviour:
   jump: 5
   jumpX: 1
   jumpY: 2
+  Life: 3
   speed: 10
-  score: 0
+  score: 5
   scoreper: 10
 --- !u!95 &138576091
 Animator:
@@ -1098,7 +1099,7 @@ GameObject:
   - component: {fileID: 254274721}
   - component: {fileID: 254274722}
   - component: {fileID: 254274723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ladder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1696,7 +1697,7 @@ GameObject:
   - component: {fileID: 727856889}
   - component: {fileID: 727856890}
   - component: {fileID: 727856891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pin (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2945,7 +2946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1440753414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3213,7 +3214,7 @@ GameObject:
   - component: {fileID: 1541729045}
   - component: {fileID: 1541729046}
   - component: {fileID: 1541729047}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ladder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3454,8 +3455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480.1, y: -323.6}
-  m_SizeDelta: {x: 115.4238, y: 38.3048}
+  m_AnchoredPosition: {x: 33.36389, y: -255.3679}
+  m_SizeDelta: {x: 488.1514, y: 47.0406}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1677524155
 MonoBehaviour:
@@ -3479,10 +3480,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3490,7 +3491,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: game over
+  m_Text: "\uBAA9\uC228\uC744 \uBD80\uC9C0\uD55C \uB108\uAD74\uB9E8"
 --- !u!222 &1677524156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3687,7 +3688,7 @@ GameObject:
   - component: {fileID: 1731279657}
   - component: {fileID: 1731279658}
   - component: {fileID: 1731279659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pin (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3819,8 +3820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -486.5, y: -234.31}
-  m_SizeDelta: {x: 22.9187, y: 9.6478}
+  m_AnchoredPosition: {x: 403.84113, y: 211.68466}
+  m_SizeDelta: {x: 158.6009, y: 50.4586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745705963
 MonoBehaviour:
@@ -3844,7 +3845,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 8
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3998,7 +3999,7 @@ GameObject:
   - component: {fileID: 1764904769}
   - component: {fileID: 1764904770}
   - component: {fileID: 1764904771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ladder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4469,7 +4470,7 @@ GameObject:
   - component: {fileID: 1938854359}
   - component: {fileID: 1938854360}
   - component: {fileID: 1938854361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4610,6 +4611,7 @@ GameObject:
   - component: {fileID: 2034723411}
   - component: {fileID: 2034723410}
   - component: {fileID: 2034723409}
+  - component: {fileID: 2034723413}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4700,6 +4702,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2034723413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034723408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c4c8f051cf12542a8c9c8a4a90d86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2077916381
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,6 +4876,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2120677712}
   - component: {fileID: 2120677713}
+  - component: {fileID: 2120677714}
+  - component: {fileID: 2120677715}
+  - component: {fileID: 2120677716}
   m_Layer: 0
   m_Name: Mice
   m_TagString: Untagged
@@ -4934,3 +4951,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2120677714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120677711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7f67c548076ad489ef759789b1d495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2120677711}
+  speed: 3
+--- !u!50 &2120677715
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120677711}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &2120677716
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120677711}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2}
+  m_EdgeRadius: 0

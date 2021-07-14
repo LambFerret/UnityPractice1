@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
     public float jumpX;
     public float jumpY;
-
+    public int Life;
     public float speed;
     public int score;
     public int scoreper;
@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         scoreCount = 6;
+        Life = 3;
 
     }
 
@@ -98,6 +99,24 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
 
     }
+    void Ladder()
+    {
+        bool h = Input.GetKey(KeyCode.UpArrow);
+        if (h)
+        {
+            gameObject.layer = 4;
+            rb.gravityScale = 0;
+            transform.position += new Vector3(0, speed, 0);
+            transform.Translate(new Vector3(0, speed, 0) * Time.deltaTime);
+        }
+    }
+
+    void LadderOut()
+    {
+        this.rb.gravityScale = 1;
+        this.gameObject.layer = 0;
+
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == 3)
@@ -115,6 +134,15 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log(scoreCount);
         }
 
+        if (other.gameObject.layer == 8)
+        {
+            Life--;
+            
+        }
+        if (other.gameObject.layer == 7)
+        {
+            Ladder();
+        }
     }
     void OnTriggerExit2D(Collider2D other)
     {
@@ -123,6 +151,11 @@ public class PlayerMovement : MonoBehaviour
             isAir = true;
             Debug.Log("detach" + other.gameObject.layer);
             
+        }
+
+        if (other.gameObject.layer == 7)
+        {
+            LadderOut();
         }
     }
 }
