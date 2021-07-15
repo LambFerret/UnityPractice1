@@ -19,13 +19,14 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Animator ani;
     Vector3 playerDir;
+
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
-        scoreCount = 6;
+        scoreCount = 8;
         Life = 3;
 
     }
@@ -51,8 +52,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        
-        
+
 
     }
 
@@ -122,7 +122,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.layer == 3)
         {
             isAir = false;
-            Debug.Log("attach" + other.gameObject.layer);
             rb.velocity = new Vector2(0, rb.velocity.y);
 
         }
@@ -131,7 +130,6 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
             score += scoreper;
             scoreCount -= 1;
-            Debug.Log(scoreCount);
         }
 
         if (other.gameObject.layer == 8)
@@ -149,7 +147,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.layer == 3)
         {
             isAir = true;
-            Debug.Log("detach" + other.gameObject.layer);
             
         }
 

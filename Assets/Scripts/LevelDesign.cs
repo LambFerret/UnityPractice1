@@ -29,7 +29,6 @@ public class LevelDesign : MonoBehaviour
         scores.text = "score! : " + myScore;
         lifes.text = "life! : " + Life;
 
-        Debug.Log(myScore);
         if (Life == 0)
         {
             GameObject.Find("gameover").GetComponent<Text>().text = "GAME OVER";

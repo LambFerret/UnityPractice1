@@ -4,27 +4,45 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public GameObject enemy;
     public float speed;
     Rigidbody2D rb;
+    RaycastHit2D rayHit;
+    Ray2D ray;
 
-    float distance;
-    RaycastHit2D rayhit;
-    Ray ray;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        ray = new Ray();
-        ray.origin = this.transform.position;
-        ray.direction = this.transform.forward;
+        ray = new Ray2D();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(-speed, rb.velocity.y);
+        rb.velocity = new Vector2(speed, rb.velocity.y);
+
     }
-  
+    void FixedUpdate()
+    {
+        float distance = 4.42f;
+        if (speed > 0)
+        {
+            ray.direction = new Vector3(1, -1, 0);
+            rayHit = Physics2D.Raycast(rb.position, ray.direction, distance, ~3);
+            Debug.DrawRay(rb.position, ray.direction * distance, Color.red);
+        }
+        else
+        {
+            ray.direction = new Vector3(-1, -1, 0);
+            rayHit = Physics2D.Raycast(rb.position, ray.direction , distance, ~3);
+            Debug.DrawRay(rb.position, ray.direction * distance, Color.red);
+
+        }
+        if (!rayHit)
+        {
+            speed = -speed;
+        }
+    }
+
 }
