@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
     RaycastHit2D rayHit;
     Ray2D ray;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,12 +17,13 @@ public class EnemyMovement : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
         rb.velocity = new Vector2(speed, rb.velocity.y);
 
     }
+
+
     void FixedUpdate()
     {
         float distance = 4.42f;
@@ -30,13 +31,11 @@ public class EnemyMovement : MonoBehaviour
         {
             ray.direction = new Vector3(1, -1, 0);
             rayHit = Physics2D.Raycast(rb.position, ray.direction, distance, ~3);
-            Debug.DrawRay(rb.position, ray.direction * distance, Color.red);
         }
         else
         {
             ray.direction = new Vector3(-1, -1, 0);
             rayHit = Physics2D.Raycast(rb.position, ray.direction , distance, ~3);
-            Debug.DrawRay(rb.position, ray.direction * distance, Color.red);
 
         }
         if (!rayHit)

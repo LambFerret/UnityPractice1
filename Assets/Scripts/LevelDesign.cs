@@ -4,24 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelDesign : MonoBehaviour
-{
-    
-    private int myScore;
 
+{
+    private int myScore;
     private int Life;
     private Text scores;
     private Text lifes;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         scores = GameObject.Find("score").GetComponent<Text>();
         lifes = GameObject.Find("Life").GetComponent<Text>();
-
-        //myScore.text;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         myScore = GameObject.Find("NeogulMan").GetComponent<PlayerMovement>().score;
