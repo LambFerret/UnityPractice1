@@ -53,11 +53,8 @@
     <UnityVersion>2020.3.13f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\LadderBehaviour.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\LevelDesign.cs" />
-    <Compile Include="Assets\Scripts\PinnedDeath.cs" />
-    <Compile Include="Assets\Scripts\ScoreItems.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
   </ItemGroup>
   <ItemGroup>
